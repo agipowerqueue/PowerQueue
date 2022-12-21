@@ -209,6 +209,7 @@ AssignView_PC As screen:
 
         Dropdown2 As dropdown:
             BorderColor: =RGBA(83, 35, 127, 1)
+            BorderThickness: =1
             ChevronBackground: =RGBA(83, 35, 127, 1)
             ChevronHoverBackground: =ColorFade(Self.Fill, -20%)
             Fill: =RGBA(0, 0, 0, 0)
@@ -221,6 +222,7 @@ AssignView_PC As screen:
             ZIndex: =16
 
         Label6 As label:
+            Color: =RGBA(83, 35, 127, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Text: ="Select Reason"
@@ -251,6 +253,7 @@ AssignView_PC As screen:
 
         TextInput3 As text:
             BorderColor: =RGBA(83, 35, 127, 1)
+            BorderThickness: =1
             Default: =""
             Height: =104
             HintText: ="Comment"
