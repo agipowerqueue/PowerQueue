@@ -167,10 +167,10 @@ AssignView_DC As screen:
                 
                 Notify(Gallery1.Selected.DocumentNumber&" Updated Successfully",NotificationType.Success);
                 
-                //SaveInvoices.Run(TextInput2_3.Text,Dropdown1_1.SelectedText.Value,0,DocumentMasters.)
+                SaveInvoices.Run(TextInput2_3.Text,Dropdown1_1.SelectedText.Value,Gallery1.Selected.Inv_Voucher)
             Text: ="Submit"
-            X: =309
-            Y: =519
+            X: =349
+            Y: =516
             ZIndex: =14
 
         Dropdown1_7 As dropdown:
