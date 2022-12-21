@@ -197,6 +197,7 @@ AssignView_PC As screen:
             ZIndex: =14
 
         Label5 As label:
+            Color: =RGBA(83, 35, 127, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
             Size: =15
@@ -207,7 +208,12 @@ AssignView_PC As screen:
             ZIndex: =15
 
         Dropdown2 As dropdown:
+            BorderColor: =RGBA(83, 35, 127, 1)
+            ChevronBackground: =RGBA(83, 35, 127, 1)
+            ChevronHoverBackground: =ColorFade(Self.Fill, -20%)
+            Fill: =RGBA(0, 0, 0, 0)
             Items: ='Document Reasons'
+            SelectionFill: =RGBA(0, 0, 0, 0)
             Visible: =If(Rej_Popup,true,false)
             Width: =455
             X: =448
@@ -224,6 +230,7 @@ AssignView_PC As screen:
             ZIndex: =17
 
         Button2 As button:
+            Fill: =RGBA(83, 35, 127, 1)
             OnSelect: |-
                 =UpdateContext({Rej_Popup:false})
             Text: ="Cancel"
@@ -233,6 +240,7 @@ AssignView_PC As screen:
             ZIndex: =18
 
         Button2_1 As button:
+            Fill: =RGBA(83, 35, 127, 1)
             OnSelect: |-
                 =UpdateContext({Rej_Popup:false})
             Text: ="Ok"
@@ -242,6 +250,7 @@ AssignView_PC As screen:
             ZIndex: =19
 
         TextInput3 As text:
+            BorderColor: =RGBA(83, 35, 127, 1)
             Default: =""
             Height: =104
             HintText: ="Comment"
