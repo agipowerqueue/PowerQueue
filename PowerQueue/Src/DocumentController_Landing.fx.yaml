@@ -53,7 +53,7 @@ DocumentController_Landing As screen:
             Width: |-
                 =//Parent.TemplateWidth/9
                 110
-            X: =236
+            X: =257
             Y: =34
             ZIndex: =4
 
@@ -72,28 +72,9 @@ DocumentController_Landing As screen:
             Width: |-
                 =//Parent.TemplateWidth/9
                 110
-            X: =372
+            X: =428
             Y: =34
             ZIndex: =5
-
-        Title2_5 As label:
-            Align: =Align.Center
-            Font: =Font.'Segoe UI'
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10
-            Text: =ThisItem.Department.'Department Name'
-            VerticalAlign: =VerticalAlign.Top
-            Width: |-
-                =//Parent.TemplateWidth/9
-                110
-            X: =482
-            Y: =34
-            ZIndex: =8
 
         Title2_6 As label:
             Align: =Align.Center
@@ -110,7 +91,7 @@ DocumentController_Landing As screen:
             Width: |-
                 =//Parent.TemplateWidth/9
                 110
-            X: =604
+            X: =583
             Y: =34
             ZIndex: =9
 
@@ -141,7 +122,9 @@ DocumentController_Landing As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10
-            Text: =ThisItem.'Status (crd1e_status)'
+            Text: |-
+                =//ThisItem.'Status (crd1e_status)'
+                "Entered In ERP"
             VerticalAlign: =VerticalAlign.Top
             Width: =110
             X: =993
@@ -353,7 +336,7 @@ DocumentController_Landing As screen:
         Text: ="Business Unit"
         VerticalAlign: =VerticalAlign.Top
         Width: =110
-        X: =416
+        X: =437
         Y: =217
         ZIndex: =15
 
@@ -371,27 +354,9 @@ DocumentController_Landing As screen:
         Text: ="Legal Entity"
         VerticalAlign: =VerticalAlign.Top
         Width: =110
-        X: =540
+        X: =603
         Y: =216
         ZIndex: =16
-
-    Title2_11 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.'Segoe UI'
-        Height: =Self.Size * 1.8
-        OnSelect: =
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =12
-        Text: ="Department"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =110
-        X: =659
-        Y: =217
-        ZIndex: =17
 
     Title2_12 As label:
         Align: =Align.Center
@@ -407,7 +372,7 @@ DocumentController_Landing As screen:
         Text: ="Uploaded On"
         VerticalAlign: =VerticalAlign.Top
         Width: =110
-        X: =781
+        X: =767
         Y: =217
         ZIndex: =18
 
@@ -610,7 +575,7 @@ DocumentController_Landing As screen:
             Size: =12
             Text: =ThisItem.'Status Name'
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 104
+            Width: =Parent.Width-50
             X: =20
             Y: =28
             ZIndex: =1
