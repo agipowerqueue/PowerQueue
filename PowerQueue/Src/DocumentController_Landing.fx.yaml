@@ -4,18 +4,19 @@ DocumentController_Landing As screen:
         =UpdateContext({Documents:DocumentMasters})
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        Height: =444
+        Height: =512
         Items: |
             =//Filter(DocumentMasters, UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate,BU.'Business Unit'=ComboBox1.Selected.'Business Unit','Status (crd1e_status)'= ComboBox1_2.Selected.'Status Name')
-            Filter(DocumentMasters,UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate,'Status (crd1e_status)'= ComboBox1_2.Selected.'Status Name')
+            Filter(DocumentMasters,UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate)
         Layout: =Layout.Vertical
         OnSelect: =Navigate(AssignView_DC,ScreenTransition.Cover)
         ShowScrollbar: =false
         TemplateFill: =If(Mod(ThisItem.rowNumber,2),RGBA(255, 255, 255, 1),RGBA(240, 243, 248,1))
         TemplatePadding: =0
         TemplateSize: =Min(96, Self.Height - 60)
-        Width: =1366
-        Y: =280
+        Width: =1188
+        X: =178
+        Y: =256
         ZIndex: =1
 
         Title2 As label:
@@ -30,9 +31,11 @@ DocumentController_Landing As screen:
             Size: =10
             Text: =ThisItem.Name
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth/9
-            X: =Title2_3.X
-            Y: =32
+            Width: |-
+                =//Parent.TemplateWidth/9
+                110
+            X: =16
+            Y: =34
             ZIndex: =1
 
         Title2_1 As label:
@@ -47,9 +50,11 @@ DocumentController_Landing As screen:
             Size: =10
             Text: =ThisItem.BU.'Business Unit'
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth/9
-            X: =Title2_8.X
-            Y: =32
+            Width: |-
+                =//Parent.TemplateWidth/9
+                110
+            X: =236
+            Y: =34
             ZIndex: =4
 
         Title2_2 As label:
@@ -64,9 +69,11 @@ DocumentController_Landing As screen:
             Size: =10
             Text: =ThisItem.BU.'Company Code'
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth/9
-            X: =Title2_9.X
-            Y: =32
+            Width: |-
+                =//Parent.TemplateWidth/9
+                110
+            X: =372
+            Y: =34
             ZIndex: =5
 
         Title2_5 As label:
@@ -81,9 +88,11 @@ DocumentController_Landing As screen:
             Size: =10
             Text: =ThisItem.Department.'Department Name'
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth/9
-            X: =Title2_11.X
-            Y: =32
+            Width: |-
+                =//Parent.TemplateWidth/9
+                110
+            X: =482
+            Y: =34
             ZIndex: =8
 
         Title2_6 As label:
@@ -98,9 +107,11 @@ DocumentController_Landing As screen:
             Size: =10
             Text: =Text(DateValue(ThisItem.UploadedOn,"en"),"dd/mm/yyyy")
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth/9
-            X: =Title2_12.X
-            Y: =32
+            Width: |-
+                =//Parent.TemplateWidth/9
+                110
+            X: =604
+            Y: =34
             ZIndex: =9
 
         Title2_7 As label:
@@ -116,8 +127,8 @@ DocumentController_Landing As screen:
             Text: =ThisItem.VendorID.VendorName
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth/9
-            X: =Title2_13.X
-            Y: =32
+            X: =725
+            Y: =34
             ZIndex: =10
 
         Title2_53 As label:
@@ -132,20 +143,10 @@ DocumentController_Landing As screen:
             Size: =10
             Text: =ThisItem.'Status (crd1e_status)'
             VerticalAlign: =VerticalAlign.Top
-            Width: =130
-            X: =Title2_52.X
-            Y: =32
+            Width: =110
+            X: =993
+            Y: =34
             ZIndex: =11
-
-        Image3 As image:
-            Height: =56
-            Image: =ThisItem.'File Link'
-            OnSelect: =Navigate(AssignView_DC,ScreenTransition.Cover)
-            Visible: =false
-            Width: =81
-            X: =1273
-            Y: =17
-            ZIndex: =12
 
         Title2_4 As label:
             Align: =Align.Center
@@ -159,9 +160,11 @@ DocumentController_Landing As screen:
             Size: =10
             Text: =ThisItem.Inv_Voucher
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth/9
-            X: =Title2_10.X
-            Y: =32
+            Width: |-
+                =//Parent.TemplateWidth/9
+                110
+            X: =126
+            Y: =34
             ZIndex: =13
 
         Title2_55 As label:
@@ -177,21 +180,21 @@ DocumentController_Landing As screen:
             Text: =ThisItem.Vendor_TRN
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth/9
-            X: =1010
-            Y: =31
+            X: =861
+            Y: =34
             ZIndex: =14
 
         Button4 As button:
             Fill: =RGBA(109, 49, 162, 1)
-            Height: =22
+            Height: =20
             HoverFill: =ColorFade(Self.Fill, -20%)
             OnSelect: =Navigate(AssignView_DC,ScreenTransition.CoverRight)
             PressedFill: =Self.Fill
             Size: =10
             Text: ="More"
-            Width: =75
-            X: =1273
-            Y: =34
+            Width: =62
+            X: =1113
+            Y: =33
             ZIndex: =15
 
     Rectangle1 As rectangle:
@@ -219,26 +222,28 @@ DocumentController_Landing As screen:
     TextInput1 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =1
+        Clear: =true
         Default: =""
         HintText: ="Search"
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        X: =1024
-        Y: =135
+        Width: =190
+        X: =1169
+        Y: =147
         ZIndex: =5
 
     Label2 As label:
         Text: ="Search"
-        X: =1024
-        Y: =100
+        X: =1171
+        Y: =107
         ZIndex: =6
 
     Label2_1 As label:
         Text: ="From"
-        X: =10
-        Y: =100
+        X: =18
+        Y: =107
         ZIndex: =7
 
     DatePicker1 As datepicker:
@@ -251,14 +256,14 @@ DocumentController_Landing As screen:
         OnSelect: |-
             =UpdateContext({Documents:Filter(DocumentMasters,UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate)})
         Width: =160
-        X: =10
-        Y: =136
+        X: =18
+        Y: =147
         ZIndex: =8
 
     Label2_2 As label:
         Text: ="BU"
-        X: =354
-        Y: =100
+        X: =361
+        Y: =107
         ZIndex: =9
 
     ComboBox1 As combobox:
@@ -277,15 +282,15 @@ DocumentController_Landing As screen:
         SelectionColor: =RGBA(166, 166, 166, 1)
         SelectionFill: =RGBA(0, 0, 0, 0)
         SelectMultiple: =false
-        Width: =210
-        X: =354
-        Y: =136
+        Width: =190
+        X: =361
+        Y: =147
         ZIndex: =10
 
     Label2_3 As label:
         Text: ="Vendor"
-        X: =807
-        Y: =100
+        X: =765
+        Y: =107
         ZIndex: =11
 
     ComboBox1_1 As combobox:
@@ -302,23 +307,24 @@ DocumentController_Landing As screen:
         SearchItems: =Search(AGI_Vendors,ComboBox1_1.SearchText,"crd1e_vendorname")
         SelectionColor: =RGBA(166, 166, 166, 1)
         SelectionFill: =RGBA(0, 0, 0, 0)
-        Width: =210
-        X: =800
-        Y: =135
+        Width: =190
+        X: =765
+        Y: =147
         ZIndex: =12
 
     Rectangle1_1 As rectangle:
         Fill: =RGBA(163, 22, 124, 1)
-        Height: =70
-        Width: =1366
-        Y: =210
+        Height: =60
+        Width: =1188
+        X: =178
+        Y: =196
         ZIndex: =13
 
     Title2_3 As label:
         Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.'Segoe UI'
-        Height: =Self.Size * 1.8
+        Height: =21
         OnSelect: =
         PaddingBottom: =0
         PaddingLeft: =0
@@ -328,7 +334,9 @@ DocumentController_Landing As screen:
         Text: |-
             ="Document #"
         VerticalAlign: =VerticalAlign.Top
-        Y: =231
+        Width: =110
+        X: =190
+        Y: =218
         ZIndex: =14
 
     Title2_8 As label:
@@ -344,8 +352,9 @@ DocumentController_Landing As screen:
         Size: =12
         Text: ="Business Unit"
         VerticalAlign: =VerticalAlign.Top
-        X: =257
-        Y: =231
+        Width: =110
+        X: =416
+        Y: =217
         ZIndex: =15
 
     Title2_9 As label:
@@ -361,8 +370,9 @@ DocumentController_Landing As screen:
         Size: =12
         Text: ="Legal Entity"
         VerticalAlign: =VerticalAlign.Top
-        X: =397
-        Y: =231
+        Width: =110
+        X: =540
+        Y: =216
         ZIndex: =16
 
     Title2_11 As label:
@@ -378,9 +388,10 @@ DocumentController_Landing As screen:
         Size: =12
         Text: ="Department"
         VerticalAlign: =VerticalAlign.Top
-        X: =537
-        Y: =231
-        ZIndex: =18
+        Width: =110
+        X: =659
+        Y: =217
+        ZIndex: =17
 
     Title2_12 As label:
         Align: =Align.Center
@@ -395,9 +406,10 @@ DocumentController_Landing As screen:
         Size: =12
         Text: ="Uploaded On"
         VerticalAlign: =VerticalAlign.Top
-        X: =691
-        Y: =231
-        ZIndex: =19
+        Width: =110
+        X: =781
+        Y: =217
+        ZIndex: =18
 
     Title2_13 As label:
         Align: =Align.Center
@@ -412,9 +424,10 @@ DocumentController_Landing As screen:
         Size: =12
         Text: ="Vendor Name"
         VerticalAlign: =VerticalAlign.Top
-        X: =859
-        Y: =231
-        ZIndex: =20
+        Width: =110
+        X: =902
+        Y: =217
+        ZIndex: =19
 
     Title2_52 As label:
         Align: =Align.Center
@@ -429,15 +442,16 @@ DocumentController_Landing As screen:
         Size: =12
         Text: ="Status"
         VerticalAlign: =VerticalAlign.Top
-        X: =1148
-        Y: =231
-        ZIndex: =21
+        Width: =110
+        X: =1162
+        Y: =217
+        ZIndex: =20
 
     Rectangle4 As rectangle:
         Fill: =RGBA(0, 0, 0, 1)
         Width: =1
         X: =264
-        ZIndex: =22
+        ZIndex: =21
 
     DatePicker1_1 As datepicker:
         BorderColor: =Gray
@@ -449,15 +463,15 @@ DocumentController_Landing As screen:
         OnSelect: |-
             =UpdateContext({Documents:Filter(DocumentMasters,UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate)})
         Width: =160
-        X: =182
-        Y: =136
-        ZIndex: =23
+        X: =190
+        Y: =147
+        ZIndex: =22
 
     Label2_4 As label:
         Text: ="To"
-        X: =182
-        Y: =100
-        ZIndex: =24
+        X: =190
+        Y: =107
+        ZIndex: =23
 
     ComboBox1_2 As combobox:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -466,25 +480,25 @@ DocumentController_Landing As screen:
         ChevronFill: =RGBA(166, 166, 166, 1)
         ChevronHoverBackground: =Self.Fill
         DefaultSelectedItems: =LookUp(Queue_Statuses,'Status Name'="Draft")
-        DisplayFields: =["crd1e_statusname"]
-        Items: =Queue_Statuses
+        DisplayFields: =["crd1e_legalentity"]
+        Items: =AGI_LegalEntities
         OnSelect: |-
             =//UpdateContext({Documents:Filter(DocumentMasters,'Status (crd1e_status)'=ComboBox1_2.Selected.'Status Name')})
-        SearchFields: =["crd1e_name"]
-        SearchItems: =Search(Queue_Statuses,ComboBox1_2.SearchText,"crd1e_name")
+        SearchFields: =["crd1e_legalentity"]
+        SearchItems: =Search(AGI_LegalEntities,ComboBox1_2.SearchText,"crd1e_legalentity")
         SelectionColor: =RGBA(166, 166, 166, 1)
         SelectionFill: =RGBA(0, 0, 0, 0)
         SelectMultiple: =false
-        Width: =210
-        X: =578
-        Y: =136
-        ZIndex: =25
+        Width: =190
+        X: =562
+        Y: =147
+        ZIndex: =24
 
     Label2_5 As label:
-        Text: ="Status"
-        X: =580
-        Y: =100
-        ZIndex: =26
+        Text: ="Legal Entity"
+        X: =562
+        Y: =107
+        ZIndex: =25
 
     Title2_10 As label:
         Align: =Align.Center
@@ -499,9 +513,10 @@ DocumentController_Landing As screen:
         Size: =12
         Text: ="Invoice "
         VerticalAlign: =VerticalAlign.Top
-        X: =114
-        Y: =231
-        ZIndex: =27
+        Width: =110
+        X: =299
+        Y: =217
+        ZIndex: =26
 
     Title2_54 As label:
         Align: =Align.Center
@@ -516,16 +531,92 @@ DocumentController_Landing As screen:
         Size: =12
         Text: ="Vendor TRN"
         VerticalAlign: =VerticalAlign.Top
-        X: =1010
-        Y: =231
-        ZIndex: =28
+        Width: =110
+        X: =1045
+        Y: =217
+        ZIndex: =27
 
     Icon2 As icon.Reload:
         Height: =30
         Icon: =Icon.Reload
         OnSelect: =Refresh(DocumentMasters)
+        Visible: =false
         Width: =30
-        X: =516
-        Y: =38
+        X: =1314
+        Y: =56
+        ZIndex: =28
+
+    TextInput1_4 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
+        Clear: =true
+        Default: =""
+        HintText: ="Search"
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =190
+        X: =965
+        Y: =147
         ZIndex: =29
+
+    Label2_18 As label:
+        Text: ="Invoice"
+        X: =965
+        Y: =107
+        ZIndex: =30
+
+    Icon4 As icon.Download:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Download
+        Width: =30
+        X: =1307
+        Y: =211
+        ZIndex: =31
+
+    Rectangle7 As rectangle:
+        BorderColor: =RGBA(163, 22, 124, 1)
+        Fill: =RGBA(163, 22, 124, 1)
+        Height: =572
+        Width: =175
+        Y: =196
+        ZIndex: =33
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        Height: =572
+        Items: =Queue_Statuses
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =64
+        Width: =178
+        Y: =196
+        ZIndex: =35
+
+        Title3 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.'Status Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =20
+            Y: =28
+            ZIndex: =1
+
+        Separator2 As rectangle:
+            Fill: =RGBA(237, 237, 237, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
 
