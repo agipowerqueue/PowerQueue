@@ -8,16 +8,18 @@
         Text: |-
             ="User ID#"
         Width: =170
-        Y: =168
+        X: =358
+        Y: =171
         ZIndex: =3
 
     "'User FirstName_1' As label":
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =36
+        Height: =44
         Text: ="User FirstName"
         Width: =170
-        Y: =249
+        X: =358
+        Y: =236
         ZIndex: =5
 
     "'User LastName_1' As label":
@@ -26,7 +28,8 @@
         Height: =36
         Text: ="User LastName"
         Width: =170
-        Y: =331
+        X: =358
+        Y: =309
         ZIndex: =6
 
     Manager_1 As label:
@@ -35,7 +38,8 @@
         Height: =36
         Text: ="Manager"
         Width: =170
-        Y: =421
+        X: =358
+        Y: =383
         ZIndex: =7
 
     Role_1 As label:
@@ -44,7 +48,8 @@
         Height: =36
         Text: ="Role"
         Width: =170
-        Y: =506
+        X: =358
+        Y: =457
         ZIndex: =8
 
     TextInputUserID_1 As text:
@@ -53,7 +58,7 @@
         Font: =Font.'Segoe UI'
         Height: =36
         Width: =362
-        X: =127
+        X: =564
         Y: =168
         ZIndex: =9
 
@@ -63,8 +68,8 @@
         Font: =Font.'Segoe UI'
         Height: =36
         Width: =362
-        X: =150
-        Y: =249
+        X: =564
+        Y: =242
         ZIndex: =10
 
     TextInputLastName_1 As text:
@@ -73,8 +78,8 @@
         Font: =Font.'Segoe UI'
         Height: =36
         Width: =362
-        X: =150
-        Y: =337
+        X: =564
+        Y: =309
         ZIndex: =11
 
     DropdownManager_1 As dropdown:
@@ -91,8 +96,8 @@
         SelectionColor: =RGBA(0, 0, 0, 1)
         SelectionFill: =RGBA(202, 202, 202, 1)
         Width: =362
-        X: =127
-        Y: =422
+        X: =564
+        Y: =386
         ZIndex: =12
 
     DropdownRole_1 As dropdown:
@@ -109,8 +114,8 @@
         SelectionColor: =RGBA(0, 0, 0, 1)
         SelectionFill: =RGBA(202, 202, 202, 1)
         Width: =362
-        X: =99
-        Y: =506
+        X: =564
+        Y: =457
         ZIndex: =13
 
     Checkbox3116_1 As checkbox:
@@ -121,7 +126,8 @@
         Height: =45
         Text: ="Active"
         Width: =170
-        Y: =555
+        X: =358
+        Y: =544
         ZIndex: =14
 
     Button1_5 As button:

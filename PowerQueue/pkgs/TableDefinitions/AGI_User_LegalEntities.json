@@ -2,10 +2,6 @@
   "DatasetName": "default.cds",
   "EntityName": "AGI_User_LegalEntities",
   "InstanceUrl": "https://org790ca179.crm15.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "crd1e_agi_user_legalentities",
-    "logicalName": "crd1e_agi_user_legalentity"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://org790ca179.crm15.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('crd1e_agi_user_legalentity')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",

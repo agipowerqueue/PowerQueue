@@ -2,10 +2,6 @@
   "DatasetName": "default.cds",
   "EntityName": "AGIVendor_Users",
   "InstanceUrl": "https://org790ca179.crm15.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "crd1e_agivendor_users",
-    "logicalName": "crd1e_agivendor_user"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://org790ca179.crm15.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('crd1e_agivendor_user')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",
