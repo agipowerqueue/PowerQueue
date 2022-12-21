@@ -2,7 +2,7 @@
     Fill: =RGBA(240, 243, 248,1)
 
     "Gallery7_1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
-        Height: =490
+        Height: =596
         Items: |-
             =With({records:AGI_Vendors},
                 ForAll(Sequence(CountRows(records)), Patch(Last(FirstN(records,Value)), {rowNumber:Value}))
@@ -21,8 +21,9 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             OnSelect: =Select(Parent)
+            Size: =10
             Text: =ThisItem.VendorID
-            Width: =120
+            Width: =80
             X: =Label4_5.X
             Y: =13
             ZIndex: =4
@@ -33,8 +34,9 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             OnSelect: =Select(Parent)
+            Size: =10
             Text: =ThisItem.VendorName
-            Width: =200
+            Width: =192
             X: =Label5_4.X
             Y: =13
             ZIndex: =5
@@ -60,8 +62,9 @@
             FontWeight: =FontWeight.Semibold
             Height: =39
             OnSelect: =Select(Parent)
+            Size: =10
             Text: =ThisItem.VendorTRN
-            Width: =120
+            Width: =127
             X: =Label7_3.X
             Y: =14
             ZIndex: =7
@@ -84,10 +87,11 @@
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             OnSelect: =Select(Parent)
-            Text: ="AGIFR"
-            Width: =120
-            X: =888
-            Y: =14
+            Size: =10
+            Text: =ThisItem.'Business Entity'
+            Width: =79
+            X: =863
+            Y: =8
             ZIndex: =11
 
         Label5_18 As label:
@@ -97,8 +101,9 @@
             FontWeight: =FontWeight.Semibold
             Height: =30
             OnSelect: =Select(Parent)
-            Text: ="INT"
-            Width: =84
+            Size: =10
+            Text: =ThisItem.'Registration Type'
+            Width: =88
             X: =509
             Y: =19
             ZIndex: =12
@@ -108,9 +113,11 @@
             BorderThickness: =1
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =41
             OnSelect: =Select(Parent)
-            Text: ="AGIFR"
-            Width: =120
+            Size: =10
+            Text: =ThisItem.'Registration Number'
+            Width: =127
             X: =721
             Y: =13
             ZIndex: =13
@@ -120,10 +127,12 @@
             BorderThickness: =1
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =41
             OnSelect: =Select(Parent)
-            Text: ="AGIFR"
-            Width: =120
-            X: =1050
+            Size: =10
+            Text: =ThisItem.'Legal Entity'
+            Width: =178
+            X: =998
             Y: =13
             ZIndex: =14
 
@@ -143,7 +152,7 @@
         Size: =12
         Text: ="Vendor Id"
         Width: =126
-        X: =227
+        X: =214
         Y: =115
         ZIndex: =6
 
@@ -165,11 +174,11 @@
         BorderThickness: =1
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Semibold
-        Height: =38
+        Height: =39
         OnSelect: =
         Size: =12
         Text: ="Vendor TRN"
-        Width: =180
+        Width: =133
         X: =336
         Y: =117
         ZIndex: =8
@@ -254,7 +263,7 @@
         Size: =12
         Text: ="Business Unit"
         Width: =167
-        X: =877
+        X: =854
         Y: =115
         ZIndex: =17
 
@@ -282,8 +291,8 @@
         Size: =12
         Text: ="Registration Number"
         Width: =191
-        X: =686
-        Y: =118
+        X: =657
+        Y: =116
         ZIndex: =19
 
     Label5_19 As label:
@@ -296,7 +305,7 @@
         Size: =12
         Text: ="Legal Entity"
         Width: =167
-        X: =1044
+        X: =999
         Y: =118
         ZIndex: =20
 
