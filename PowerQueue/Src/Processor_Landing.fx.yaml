@@ -33,22 +33,6 @@ Processor_Landing As screen:
             Y: =32
             ZIndex: =1
 
-        NextArrow2_2 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            Height: =57
-            Icon: =Icon.ChevronRight
-            OnSelect: =Navigate(AssignView_PC,ScreenTransition.Cover)
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            TabIndex: =0
-            Tooltip: ="View item details"
-            Width: =43
-            X: =1316
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =2
-
         Title2_28 As label:
             Align: =Align.Center
             Font: =Font.'Segoe UI'
@@ -93,7 +77,7 @@ Processor_Landing As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10
-            Text: =ThisItem.VendorID.VendorName
+            Text: =ThisItem.VendorID.VendorID
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth/9
             X: =Title2_35.X
@@ -117,7 +101,7 @@ Processor_Landing As screen:
             Y: =32
             ZIndex: =9
 
-        Title2_39 As label:
+        Title2_31 As label:
             Align: =Align.Center
             Font: =Font.'Segoe UI'
             Height: =Self.Size * 1.8
@@ -127,12 +111,39 @@ Processor_Landing As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10
-            Text: =ThisItem.'Status (crd1e_status)'
+            Text: =ThisItem.VendorID.VendorName
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth/9
-            X: =Title2_38.X
-            Y: =34
-            ZIndex: =10
+            X: =634
+            Y: =32
+            ZIndex: =11
+
+        Title2_43 As label:
+            Align: =Align.Center
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            Text: =ThisItem.DocumentNumber
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth/9
+            X: =1010
+            Y: =32
+            ZIndex: =12
+
+        Checkbox1 As checkbox:
+            CheckboxSize: =30
+            Height: =35
+            OnSelect: =Select(Parent)
+            Text: =""
+            Width: =31
+            X: =1238
+            Y: =27
+            ZIndex: =13
 
     Rectangle1_6 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 1)
@@ -161,6 +172,15 @@ Processor_Landing As screen:
         Width: =1
         X: =264
         ZIndex: =18
+
+    Icon4_1 As icon.Download:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Download
+        Width: =30
+        X: =1314
+        Y: =218
+        ZIndex: =31
 
     Group2 As group:
         Height: =5
@@ -330,9 +350,9 @@ Processor_Landing As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =13
-            Text: ="Document No"
+            Text: ="Invoice No"
             VerticalAlign: =VerticalAlign.Top
-            X: =44
+            X: =20
             Y: =221
             ZIndex: =8
 
@@ -349,7 +369,7 @@ Processor_Landing As screen:
             Size: =13
             Text: ="Bussiness Unit"
             VerticalAlign: =VerticalAlign.Top
-            X: =250
+            X: =160
             Y: =221
             ZIndex: =9
 
@@ -366,7 +386,7 @@ Processor_Landing As screen:
             Size: =13
             Text: ="Legal Entity"
             VerticalAlign: =VerticalAlign.Top
-            X: =457
+            X: =310
             Y: =221
             ZIndex: =10
 
@@ -381,9 +401,9 @@ Processor_Landing As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =13
-            Text: ="Vendor Name"
+            Text: ="Vendor ID"
             VerticalAlign: =VerticalAlign.Top
-            X: =650
+            X: =461
             Y: =221
             ZIndex: =11
 
@@ -398,9 +418,9 @@ Processor_Landing As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =13
-            Text: ="Uploaded on"
+            Text: ="Invoice date"
             VerticalAlign: =VerticalAlign.Top
-            X: =874
+            X: =807
             Y: =221
             ZIndex: =13
 
@@ -415,18 +435,43 @@ Processor_Landing As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =13
-            Text: ="Status"
+            Text: ="Final Status"
             VerticalAlign: =VerticalAlign.Top
-            X: =1109
+            X: =1160
             Y: =221
             ZIndex: =14
 
-    Icon4_1 As icon.Download:
+    Title2_36 As label:
+        Align: =Align.Center
         Color: =RGBA(255, 255, 255, 1)
-        Height: =30
-        Icon: =Icon.Download
-        Width: =30
-        X: =1314
-        Y: =218
-        ZIndex: =31
+        Font: =Font.'Segoe UI'
+        Height: =Self.Size * 1.8
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13
+        Text: ="Vendor Name"
+        VerticalAlign: =VerticalAlign.Top
+        X: =630
+        Y: =221
+        ZIndex: =32
+
+    Title2_42 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =Self.Size * 1.8
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =13
+        Text: ="Voucher Number"
+        VerticalAlign: =VerticalAlign.Top
+        X: =1010
+        Y: =221
+        ZIndex: =33
 
