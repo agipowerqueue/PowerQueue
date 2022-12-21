@@ -3584,7 +3584,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_56",
-      "ParentIndex": 13,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3769,7 +3769,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingString": "ThisItem.Name",
           "InvariantPropertyName": "Text",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -3858,7 +3858,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_57",
-      "ParentIndex": 14,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4139,7 +4139,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_58",
-      "ParentIndex": 17,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4369,7 +4369,14 @@
           "NameMapSourceSchema": "?"
         },
         "VerticalAlign",
-        "X",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "276",
+          "InvariantPropertyName": "X",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Y",
         {
           "AFDDataSourceName": "",
@@ -4413,7 +4420,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_59",
-      "ParentIndex": 12,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4694,7 +4701,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_60",
-      "ParentIndex": 15,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4982,7 +4989,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_61",
-      "ParentIndex": 16,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5516,7 +5523,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_63",
-      "ParentIndex": 7,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5783,7 +5790,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_64",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6050,7 +6057,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_65",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6317,7 +6324,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_66",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6591,7 +6598,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_67",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
