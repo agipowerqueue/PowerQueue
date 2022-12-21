@@ -8,6 +8,7 @@ UserList As screen:
                 ForAll(Sequence(CountRows(records)), Patch(Last(FirstN(records,Value)), {rowNumber:Value}))
             )
         Layout: =Layout.Vertical
+        OnSelect: =
         TemplateFill: =If(Mod(ThisItem.rowNumber,2),RGBA(255, 255, 255, 1),RGBA(240, 243, 248,1))
         TemplatePadding: =0
         TemplateSize: =79
@@ -88,7 +89,11 @@ UserList As screen:
             Color: =RGBA(50, 86, 160, 1)
             Height: =30
             Icon: =Icon.Edit
-            OnSelect: =Navigate('Edit User')
+            OnSelect: |-
+                =Navigate('Edit User');
+                //ViewForm(Form1_1);
+                //NewForm(Form1_1)
+                Set(vardisp,TextInputUserID_1.DisplayMode.View)
             Width: =44
             X: =1269
             Y: =23

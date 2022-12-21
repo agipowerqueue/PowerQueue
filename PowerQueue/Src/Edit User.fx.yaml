@@ -55,6 +55,7 @@
     TextInputUserID_1 As text:
         BorderColor: =RGBA(0, 0, 0, 1)
         Default: =Gallery7.Selected.UserID
+        DisplayMode: =vardisp
         Font: =Font.'Segoe UI'
         Height: =36
         Width: =362
@@ -91,7 +92,7 @@
         ChevronHoverFill: =RGBA(0, 0, 0, 1)
         Font: =Font.'Segoe UI'
         Height: =35
-        Items: =Gallery7.Selected
+        Items: =["Feizal Abdul Salam","Muneer Ahmed Khan","Thejho Bahari","Mohamed Nazan","Atif Maqbool"]
         PressedFill: =RGBA(214, 223, 238, 1)
         SelectionColor: =RGBA(0, 0, 0, 1)
         SelectionFill: =RGBA(202, 202, 202, 1)
@@ -109,7 +110,7 @@
         ChevronHoverFill: =RGBA(0, 0, 0, 1)
         Font: =Font.'Segoe UI'
         Height: =36
-        Items: =Gallery7.Selected
+        Items: =["Accountant","Shared Service – AP Manager","Junior Accountant"]
         PressedFill: =RGBA(214, 223, 238, 1)
         SelectionColor: =RGBA(0, 0, 0, 1)
         SelectionFill: =RGBA(202, 202, 202, 1)
@@ -124,6 +125,7 @@
         Default: =Gallery7.Selected.Active
         Font: =Font.'Segoe UI'
         Height: =45
+        OnCheck: =Gallery7.Selected.Active
         Text: ="Active"
         Width: =170
         X: =358
@@ -177,6 +179,7 @@
         Fill: =RGBA(83, 35, 127, 1)
         Font: =Font.'Segoe UI'
         HoverFill: =ColorFade(RGBA(83, 35, 127, 1), -20%)
+        OnSelect: =Set(vardisp,TextInputUserID_1.DisplayMode.Edit)
         RadiusBottomLeft: =50
         RadiusBottomRight: =50
         RadiusTopLeft: =50
@@ -187,4 +190,342 @@
         X: =472
         Y: =640
         ZIndex: =20
+
+    Form1_1 As form:
+        DataSource: ='AGI_User Masters'
+        DefaultMode: =
+        Height: =387
+        NumberOfColumns: =1
+        Width: =417
+        X: =948
+        Y: =125
+        ZIndex: =21
+
+        UserID_DataCard1_1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crd1e_userid"
+            Default: =ThisItem.UserID
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'AGI_User Masters'],DataSourceInfo.DisplayName,"crd1e_userid")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            MaxLength: =DataSourceInfo([@'AGI_User Masters'], DataSourceInfo.MaxLength, "crd1e_userid")
+            Required: =false
+            Update: =DataCardValue3_1.Text
+            Width: =417
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey3_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue3_1.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue3_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Gallery7.Selected.UserID
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey3_1.X + DataCardKey3_1.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage2_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue3_1.Y + DataCardValue3_1.Height
+                ZIndex: =3
+
+            StarVisible2_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey3_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey3_1.Y
+                ZIndex: =4
+
+        FirstName_DataCard1_1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crd1e_firstname"
+            Default: =ThisItem.FirstName
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'AGI_User Masters'],DataSourceInfo.DisplayName,"crd1e_firstname")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'AGI_User Masters'], DataSourceInfo.MaxLength, "crd1e_firstname")
+            Required: =false
+            Update: =DataCardValue5_1.Text
+            Width: =417
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey5_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue5_1.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue5_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Gallery7.Selected.FirstName
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey5_1.X + DataCardKey5_1.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage6_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue5_1.Y + DataCardValue5_1.Height
+                ZIndex: =3
+
+            StarVisible6_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey5_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey5_1.Y
+                ZIndex: =4
+
+        LastName_DataCard1_1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crd1e_lastname"
+            Default: =ThisItem.LastName
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'AGI_User Masters'],DataSourceInfo.DisplayName,"crd1e_lastname")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'AGI_User Masters'], DataSourceInfo.MaxLength, "crd1e_lastname")
+            Required: =false
+            Update: =DataCardValue9_1.Text
+            Width: =417
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey8_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue9_1.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue9_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Gallery7.Selected.LastName
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey8_1.X + DataCardKey8_1.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage7_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue9_1.Y + DataCardValue9_1.Height
+                ZIndex: =3
+
+            StarVisible7_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey8_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey8_1.Y
+                ZIndex: =4
+
+        Manager_DataCard2_1 As typedDataCard.allowedValuesStringEditCard:
+            AllowedValues: =DataSourceInfo([@'AGI_User Masters'], DataSourceInfo.AllowedValues, "crd1e_manager")
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crd1e_manager"
+            Default: =ThisItem.Manager
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'AGI_User Masters'],DataSourceInfo.DisplayName,"crd1e_manager")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue13_1.Selected.Value
+            Width: =417
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey12_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue13_1.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue13_1 As dropdown:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                Items: =["Feizal Abdul Salam","Muneer Ahmed Khan","Thejho Bahari","Mohamed Nazan","Atif Maqbool"]
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey12_1.X + DataCardKey12_1.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage11_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue13_1.Y + DataCardValue13_1.Height
+                ZIndex: =3
+
+            StarVisible11_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey12_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey12_1.Y
+                ZIndex: =4
+
+        Role_DataCard2_1 As typedDataCard.allowedValuesStringEditCard:
+            AllowedValues: =DataSourceInfo([@'AGI_User Masters'], DataSourceInfo.AllowedValues, "crd1e_role")
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="crd1e_role"
+            Default: =ThisItem.Role
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'AGI_User Masters'],DataSourceInfo.DisplayName,"crd1e_role")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue14_1.Selected.Value
+            Width: =417
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey13_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 + (DataCardValue14_1.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            DataCardValue14_1 As dropdown:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                Items: =["Accountant","Shared Service – AP Manager","Junior Accountant"]
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey13_1.X + DataCardKey13_1.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage12_1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue14_1.Y + DataCardValue14_1.Height
+                ZIndex: =3
+
+            StarVisible12_1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey13_1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey13_1.Y
+                ZIndex: =4
 
