@@ -10,6 +10,10 @@
     "Name": "AGI_Vendors",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
+      "cr6c3_businessentity": "Business Entity",
+      "cr6c3_legalentity": "Legal Entity",
+      "cr6c3_registrationnumber": "Registration Number",
+      "cr6c3_registrationtype": "Registration Type",
       "crd1e_active": "Active",
       "crd1e_agi_vendor_AsyncOperations": "System Jobs",
       "crd1e_agi_vendor_BulkDeleteFailures": "Bulk Delete Failures",

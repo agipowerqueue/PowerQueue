@@ -74,7 +74,7 @@
             Icon: =Icon.Edit
             OnSelect: =Navigate('Vendor Edit')
             Width: =44
-            X: =1261
+            X: =1308
             Y: =18
             ZIndex: =10
 
@@ -99,8 +99,8 @@
             OnSelect: =Select(Parent)
             Text: ="INT"
             Width: =84
-            X: =347
-            Y: =14
+            X: =509
+            Y: =19
             ZIndex: =12
 
         Label5_20 As label:
@@ -111,8 +111,8 @@
             OnSelect: =Select(Parent)
             Text: ="AGIFR"
             Width: =120
-            X: =718
-            Y: =4
+            X: =721
+            Y: =13
             ZIndex: =13
 
         Label5_21 As label:
@@ -155,7 +155,7 @@
         OnSelect: =
         Size: =12
         Text: ="Vendor Name"
-        Width: =236
+        Width: =200
         X: =14
         Y: =115
         ZIndex: =7
@@ -170,7 +170,7 @@
         Size: =12
         Text: ="Vendor TRN"
         Width: =180
-        X: =547
+        X: =336
         Y: =117
         ZIndex: =8
 
@@ -184,8 +184,8 @@
         Size: =12
         Text: ="Active"
         Width: =119
-        X: =1186
-        Y: =110
+        X: =1166
+        Y: =113
         ZIndex: =9
 
     Label9_2 As label:
@@ -195,7 +195,7 @@
         Size: =12
         Text: ="Edit"
         Width: =55
-        X: =1253
+        X: =1300
         Y: =113
         ZIndex: =10
 
@@ -263,12 +263,13 @@
         BorderThickness: =1
         Color: =RGBA(255, 255, 255, 1)
         FontWeight: =FontWeight.Semibold
+        Height: =39
         OnSelect: =
         Size: =12
-        Text: ="Vendor Registration Type"
-        Width: =236
-        X: =328
-        Y: =116
+        Text: ="Registration Type"
+        Width: =160
+        X: =484
+        Y: =118
         ZIndex: =18
 
     Label7_6 As label:
