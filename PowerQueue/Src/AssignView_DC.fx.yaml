@@ -209,15 +209,6 @@ AssignView_DC As screen:
             Y: =382
             ZIndex: =19
 
-        Icon4 As icon.AddDocument:
-            Height: =40
-            Icon: =Icon.AddDocument
-            OnSelect: =Select(DataCardValue8)
-            Width: =40
-            X: =499
-            Y: =440
-            ZIndex: =20
-
         DataCardValue8 As attachments:
             AddAttachmentText: ="Upload file"
             BorderColor: =Self.Fill
@@ -229,7 +220,7 @@ AssignView_DC As screen:
             DropTargetBorderStyle: =BorderStyle.None
             DropTargetBorderThickness: =0
             Fill: =RGBA(0, 0, 0, 0)
-            FontWeight: =FontWeight.Lighter
+            FontWeight: =FontWeight.Semibold
             Height: =108
             HoverFill: =RGBA(0, 0, 0, 0)
             IsInDataCard: =true
