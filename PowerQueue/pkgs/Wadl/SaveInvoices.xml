@@ -5,10 +5,12 @@
       <boolean name="ManualTriggerInput_InvoiceNo_Value_def" />
       <string name="ManualTriggerInput_BusinessUnit_Value_def" />
       <string name="ManualTriggerInput_Createfile_FileContent_def" />
+      <string name="ManualTriggerInput_Compose_Inputs_def" />
       <object name="ManualTriggerInput">
         <property name="InvoiceNo_Value" type="boolean" />
         <property name="BusinessUnit_Value" type="string" />
         <property name="Createfile_FileContent" type="string" />
+        <property name="Compose_Inputs" type="string" />
       </object>
     </jsonTypes>
   </grammars>
@@ -25,6 +27,7 @@
             <param style="plain" name="InvoiceNo_Value" path="/InvoiceNo_Value" type="xs:boolean" required="true" />
             <param style="plain" name="BusinessUnit_Value" path="/BusinessUnit_Value" type="xs:string" required="true" />
             <param style="plain" name="Createfile_FileContent" path="/Createfile_FileContent" type="xs:string" required="true" />
+            <param style="plain" name="Compose_Inputs" path="/Compose_Inputs" type="xs:string" required="true" />
           </representation>
         </request>
       </method>
