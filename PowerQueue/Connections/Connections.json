@@ -12,8 +12,7 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "57693e27-572a-4d99-aab1-07c7ce9ad1a7",
-      "a2a8fd17-73da-4775-a913-1cc02f5f8e1c"
+      "57693e27-572a-4d99-aab1-07c7ce9ad1a7"
     ],
     "id": "190a2e88-4dc7-4e28-b1b0-933f04b55a79"
   },
@@ -141,8 +140,7 @@
     "dependencies": {},
     "dependents": [
       "7f0c9a70-916b-4904-85bc-d371bc9a631f",
-      "57693e27-572a-4d99-aab1-07c7ce9ad1a7",
-      "a2a8fd17-73da-4775-a913-1cc02f5f8e1c"
+      "57693e27-572a-4d99-aab1-07c7ce9ad1a7"
     ],
     "id": "a0d4f601-64c6-4cdb-b419-a84d477f7765"
   },

@@ -91,7 +91,7 @@ UserList As screen:
             Icon: =Icon.Edit
             OnSelect: |-
                 =Navigate('Edit User');
-                Set(vardisp,TextInputUserID_1.DisplayMode.View)
+                Set(vardisp,DisplayMode.View)
             Width: =44
             X: =1269
             Y: =23
