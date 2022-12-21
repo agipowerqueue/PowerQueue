@@ -6313,7 +6313,7 @@
       "LayoutName": "horizontal",
       "MetaDataIDKey": "",
       "Name": "Form1_1",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10275,7 +10275,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextInputUserID_1",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

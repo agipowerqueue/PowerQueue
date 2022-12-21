@@ -100,23 +100,6 @@ Processor_Landing As screen:
             Y: =32
             ZIndex: =7
 
-        Title2_31 As label:
-            Align: =Align.Center
-            Font: =Font.'Segoe UI'
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10
-            Text: =ThisItem.Department.'Department Name'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth/9
-            X: =Title2_36.X
-            Y: =32
-            ZIndex: =8
-
         Title2_32 As label:
             Align: =Align.Center
             Font: =Font.'Segoe UI'
@@ -178,6 +161,15 @@ Processor_Landing As screen:
         Width: =1
         X: =264
         ZIndex: =18
+
+    Icon4_1 As icon.Download:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Download
+        Width: =30
+        X: =1314
+        Y: =218
+        ZIndex: =31
 
     Group2 As group:
         Height: =5
@@ -366,7 +358,7 @@ Processor_Landing As screen:
             Size: =13
             Text: ="Bussiness Unit"
             VerticalAlign: =VerticalAlign.Top
-            X: =234
+            X: =250
             Y: =221
             ZIndex: =9
 
@@ -383,7 +375,7 @@ Processor_Landing As screen:
             Size: =13
             Text: ="Legal Entity"
             VerticalAlign: =VerticalAlign.Top
-            X: =424
+            X: =457
             Y: =221
             ZIndex: =10
 
@@ -400,27 +392,9 @@ Processor_Landing As screen:
             Size: =13
             Text: ="Vendor Name"
             VerticalAlign: =VerticalAlign.Top
-            X: =614
+            X: =650
             Y: =221
             ZIndex: =11
-
-        Title2_36 As label:
-            Align: =Align.Center
-            Color: =RGBA(255, 255, 255, 1)
-            Font: =Font.'Segoe UI'
-            Height: =Self.Size * 1.8
-            OnSelect: =
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =13
-            Text: ="Department Name"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =170
-            X: =804
-            Y: =221
-            ZIndex: =12
 
         Title2_37 As label:
             Align: =Align.Center
@@ -435,7 +409,7 @@ Processor_Landing As screen:
             Size: =13
             Text: ="Uploaded on"
             VerticalAlign: =VerticalAlign.Top
-            X: =1014
+            X: =874
             Y: =221
             ZIndex: =13
 
@@ -452,7 +426,7 @@ Processor_Landing As screen:
             Size: =13
             Text: ="Status"
             VerticalAlign: =VerticalAlign.Top
-            X: =1171
+            X: =1109
             Y: =221
             ZIndex: =14
 
