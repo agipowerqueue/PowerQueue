@@ -165,7 +165,9 @@ AssignView_DC As screen:
                 
                 Reset(DataCardValue8);
                 
-                Notify(Gallery1.Selected.DocumentNumber&" Updated Successfully",NotificationType.Success)
+                Notify(Gallery1.Selected.DocumentNumber&" Updated Successfully",NotificationType.Success);
+                
+                SaveInvoices.Run(TextInput2_3.Text,Dropdown1_1.SelectedText.Value,pdfData.result)
             Text: ="Submit"
             X: =309
             Y: =519
