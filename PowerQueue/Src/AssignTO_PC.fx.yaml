@@ -47,8 +47,8 @@ AssignTO_PC As screen:
             Text: =ThisItem.FirstName &" "&ThisItem.LastName
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth/9
-            X: =225
-            Y: =32
+            X: =460
+            Y: =36
             ZIndex: =4
 
         Title2_64 As label:
@@ -64,7 +64,7 @@ AssignTO_PC As screen:
             Text: =ThisItem.BusinessUnit
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth/9
-            X: =451
+            X: =208
             Y: =32
             ZIndex: =5
 
@@ -173,7 +173,7 @@ AssignTO_PC As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =12
-        Text: ="User ID"
+        Text: ="User Id"
         VerticalAlign: =VerticalAlign.Top
         X: =35
         Y: =230
@@ -192,8 +192,8 @@ AssignTO_PC As screen:
         Size: =12
         Text: ="Name"
         VerticalAlign: =VerticalAlign.Top
-        X: =(Title2_57.Width+Title2_57.X)+40
-        Y: =230
+        X: =471
+        Y: =232
         ZIndex: =9
 
     Title2_59 As label:
@@ -209,8 +209,8 @@ AssignTO_PC As screen:
         Size: =12
         Text: ="Business Unit"
         VerticalAlign: =VerticalAlign.Top
-        X: =465
-        Y: =230
+        X: =237
+        Y: =228
         ZIndex: =10
 
     Title2_60 As label:

@@ -10,8 +10,7 @@ AssignView_PC As screen:
         Label3_4 As label:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Text: |-
-                ="Vendor: "
+            Text: ="Invoice No"
             X: =11
             Y: =40
             ZIndex: =1
@@ -19,8 +18,7 @@ AssignView_PC As screen:
         Label3_5 As label:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Text: |-
-                ="DocumentNo: "
+            Text: ="Business Unit"
             X: =11
             Y: =120
             ZIndex: =2
@@ -28,10 +26,9 @@ AssignView_PC As screen:
         Label3_6 As label:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Text: |-
-                ="Bussiness Unit: "
+            Text: ="Vendor Id"
             X: =11
-            Y: =206
+            Y: =285
             ZIndex: =3
 
         Label3_7 As label:
@@ -40,7 +37,7 @@ AssignView_PC As screen:
             Text: |-
                 ="Legal Entity: "
             X: =11
-            Y: =282
+            Y: =206
             ZIndex: =4
 
         TextInput2_1 As text:
