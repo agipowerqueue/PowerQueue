@@ -7,7 +7,7 @@ DocumentController_Landing As screen:
         Height: =444
         Items: |
             =//Filter(DocumentMasters, UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate,BU.'Business Unit'=ComboBox1.Selected.'Business Unit','Status (crd1e_status)'= ComboBox1_2.Selected.'Status Name')
-            Filter(DocumentMasters,UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate,'Status (crd1e_status)'= ComboBox1_2.Selected.'Status Name')
+            Filter(DocumentMasters,UploadedOn>=DatePicker1.SelectedDate,UploadedOn<=DatePicker1_1.SelectedDate)
         Layout: =Layout.Vertical
         OnSelect: =Navigate(AssignView_DC,ScreenTransition.Cover)
         ShowScrollbar: =false
@@ -219,6 +219,7 @@ DocumentController_Landing As screen:
     TextInput1 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =1
+        Clear: =true
         Default: =""
         HintText: ="Search"
         RadiusBottomLeft: =0
@@ -277,15 +278,15 @@ DocumentController_Landing As screen:
         SelectionColor: =RGBA(166, 166, 166, 1)
         SelectionFill: =RGBA(0, 0, 0, 0)
         SelectMultiple: =false
-        Width: =210
+        Width: =170
         X: =354
         Y: =136
         ZIndex: =10
 
     Label2_3 As label:
         Text: ="Vendor"
-        X: =807
-        Y: =100
+        X: =728
+        Y: =99
         ZIndex: =11
 
     ComboBox1_1 As combobox:
@@ -303,8 +304,8 @@ DocumentController_Landing As screen:
         SelectionColor: =RGBA(166, 166, 166, 1)
         SelectionFill: =RGBA(0, 0, 0, 0)
         Width: =210
-        X: =800
-        Y: =135
+        X: =721
+        Y: =134
         ZIndex: =12
 
     Rectangle1_1 As rectangle:
@@ -466,24 +467,24 @@ DocumentController_Landing As screen:
         ChevronFill: =RGBA(166, 166, 166, 1)
         ChevronHoverBackground: =Self.Fill
         DefaultSelectedItems: =LookUp(Queue_Statuses,'Status Name'="Draft")
-        DisplayFields: =["crd1e_statusname"]
-        Items: =Queue_Statuses
+        DisplayFields: =["crd1e_legalentity"]
+        Items: =AGI_LegalEntities
         OnSelect: |-
             =//UpdateContext({Documents:Filter(DocumentMasters,'Status (crd1e_status)'=ComboBox1_2.Selected.'Status Name')})
-        SearchFields: =["crd1e_name"]
-        SearchItems: =Search(Queue_Statuses,ComboBox1_2.SearchText,"crd1e_name")
+        SearchFields: =["crd1e_legalentity"]
+        SearchItems: =Search(AGI_LegalEntities,ComboBox1_2.SearchText,"crd1e_legalentity")
         SelectionColor: =RGBA(166, 166, 166, 1)
         SelectionFill: =RGBA(0, 0, 0, 0)
         SelectMultiple: =false
-        Width: =210
-        X: =578
-        Y: =136
+        Width: =170
+        X: =537
+        Y: =135
         ZIndex: =25
 
     Label2_5 As label:
-        Text: ="Status"
-        X: =580
-        Y: =100
+        Text: ="Legal Entity"
+        X: =539
+        Y: =99
         ZIndex: =26
 
     Title2_10 As label:
