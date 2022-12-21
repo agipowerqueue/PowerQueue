@@ -110,19 +110,6 @@ UserList As screen:
             Y: =18
             ZIndex: =11
 
-        Label5_14 As label:
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =1
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            OnSelect: =Select(Parent)
-            Size: =15
-            Text: =ThisItem.BusinessUnit
-            Width: =236
-            X: =449
-            Y: =14
-            ZIndex: =11
-
     Rectangle2_1 As rectangle:
         Fill: =RGBA(163, 22, 124, 1)
         Height: =70
@@ -267,20 +254,6 @@ UserList As screen:
         Size: =15
         Text: ="Business Unit"
         X: =855
-        Y: =171
-        ZIndex: =16
-
-    Label5_13 As label:
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =1
-        Color: =RGBA(255, 255, 255, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        OnSelect: =
-        Size: =15
-        Text: ="Business Unit"
-        Width: =236
-        X: =449
         Y: =171
         ZIndex: =16
 
