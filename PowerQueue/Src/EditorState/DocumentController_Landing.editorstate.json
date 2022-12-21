@@ -113,7 +113,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button4",
-      "ParentIndex": 1,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6871,7 +6871,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGalleryTitle.ID%",
       "Name": "Title2",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7138,7 +7138,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_1",
-      "ParentIndex": 4,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8536,7 +8536,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_2",
-      "ParentIndex": 5,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9077,7 +9077,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_4",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9344,7 +9344,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_5",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9907,7 +9907,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_53",
-      "ParentIndex": 10,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10460,7 +10460,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_55",
-      "ParentIndex": 9,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10727,7 +10727,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_6",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10994,7 +10994,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title2_7",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

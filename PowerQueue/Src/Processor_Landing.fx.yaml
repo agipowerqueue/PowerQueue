@@ -162,15 +162,6 @@ Processor_Landing As screen:
         X: =264
         ZIndex: =18
 
-    Icon4_1 As icon.Download:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =30
-        Icon: =Icon.Download
-        Width: =30
-        X: =1314
-        Y: =218
-        ZIndex: =31
-
     Group2 As group:
         Height: =5
         Width: =5
@@ -429,4 +420,13 @@ Processor_Landing As screen:
             X: =1109
             Y: =221
             ZIndex: =14
+
+    Icon4_1 As icon.Download:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Download
+        Width: =30
+        X: =1314
+        Y: =218
+        ZIndex: =31
 
