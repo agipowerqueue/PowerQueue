@@ -585,6 +585,7 @@ DocumentController_Landing As screen:
         ZIndex: =33
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        Default: =LookUp(Queue_Statuses,'Status Name'="Draft")
         Height: =572
         Items: =Queue_Statuses
         Layout: =Layout.Vertical
